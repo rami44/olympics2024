@@ -100,5 +100,3 @@ public:
 #endif
 
 // Path: AVLTree.h
-
-my name is amir
