@@ -96,6 +96,8 @@ public:
         int rightH = (right == nullptr) ? -1 : right->height;
         height = std::max(leftH, rightH) + 1;
     }
+
+    test for us
 };
 
 #endif
