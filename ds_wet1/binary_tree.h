@@ -36,7 +36,6 @@
         update_maxNode(curr->get_right());
     }
 
-
     bool node_exists(const std::shared_ptr<Node<Key,Data>>& node,const std::shared_ptr<Node<Key,Data>>& curr){
         Key k=node->get_key();
         if(curr== nullptr)
