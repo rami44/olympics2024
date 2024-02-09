@@ -10,7 +10,9 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="wet1" targetName="wet1" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -28,9 +30,6 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/Amir" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -89,6 +88,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="wet1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wet1" TARGET_NAME="wet1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wet1" RUN_TARGET_NAME="wet1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +105,7 @@
       <workItem from="1707498719571" duration="495000" />
       <workItem from="1707499286631" duration="827000" />
       <workItem from="1707500135425" duration="3574000" />
-      <workItem from="1707508305921" duration="5083000" />
+      <workItem from="1707508305921" duration="3201000" />
     </task>
     <task id="LOCAL-00001" summary="test for us">
       <created>1707498791279</created>
@@ -134,5 +138,16 @@
     <MESSAGE value="test for us" />
     <MESSAGE value="hrlllleoeo" />
     <option name="LAST_COMMIT_MESSAGE" value="hrlllleoeo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="CMakeLineBreakpoint">
+          <url>file://$PROJECT_DIR$/CMakeLists.txt</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

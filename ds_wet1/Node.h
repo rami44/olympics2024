@@ -96,14 +96,10 @@ public:
         height = std::max(leftH, rightH) + 1;
     }
 
-    test for us
+
 };
 
 #endif
 
 // Path: AVLTree.h
 
-my name is amir
-
-
-helloo
