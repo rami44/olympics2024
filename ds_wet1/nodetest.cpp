@@ -16,6 +16,20 @@ int main() {
     node3->set_left(node4);
     node4->set_left(node5);
 
+
+
+    node5->set_Height(); // Height of node1 is 4
+    node5->set_BF();
+
+    node4->set_Height(); // Height of node1 is 4
+    node4->set_BF();
+
+    node3->set_Height(); // Height of node1 is 4
+    node3->set_BF();
+
+    node2->set_Height(); // Height of node1 is 4
+    node2->set_BF();
+
     node1->set_Height(); // Height of node1 is 4
     node1->set_BF(); // Balance Factor of node1 is 4
 

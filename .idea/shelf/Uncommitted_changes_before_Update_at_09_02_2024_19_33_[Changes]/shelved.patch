@@ -1,0 +1,69 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
++++ /dev/null	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/wet1.iml
+===================================================================
+diff --git a/.idea/wet1.iml b/.idea/wet1.iml
+deleted file mode 100644
+--- a/.idea/wet1.iml	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
++++ /dev/null	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="CPP_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
++++ /dev/null	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/wet1.iml" filepath="$PROJECT_DIR$/.idea/wet1.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: ds_wet1/Node.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#ifndef DATA_STRUCTURE_WET1_NODE\r\n#define DATA_STRUCTURE_WET1_NODE\r\n\r\n#include <memory>\r\n\r\ntemplate<class Key, class Data>\r\nclass Node {\r\nprivate:\r\n    const Key key;\r\n    std::shared_ptr<Data> data;\r\n    std::shared_ptr<Node> left;\r\n    std::shared_ptr<Node> father;\r\n    std::shared_ptr<Node> right;\r\n    int height;\r\n    int BF;\r\n\r\npublic:\r\n\r\n    //ctor\r\n    Node(Key key, const std::shared_ptr<Data> &d) : key(key), data(d), height(0), BF(0) {\r\n        // Assigning null pointer using the reset function\r\n        left = nullptr;\r\n        right = nullptr;\r\n        father = nullptr;\r\n    }\r\n\r\n    //return the key\r\n    Key get_key() const {\r\n        return key;\r\n    }\r\n\r\n    //return the data\r\n    std::shared_ptr<Data> get_data() const {\r\n        return data;\r\n    }\r\n\r\n    virtual ~Node() = default;\r\n\r\n    Node(const Node &other) = default;\r\n\r\n    Node &operator=(const Node &other) = delete;\r\n\r\n\r\n    //return left son\r\n    std::shared_ptr<Node> get_left() const {\r\n        return left;\r\n    }\r\n\r\n    //update the left node\r\n    void set_left(const std::shared_ptr<Node> &newL) {\r\n        left = newL;\r\n        set_Height();\r\n    }\r\n\r\n    //return right son\r\n    std::shared_ptr<Node> get_right() const {\r\n        return right;\r\n    }\r\n\r\n    // update the right node\r\n    void set_right(const std::shared_ptr<Node> &newR) {\r\n        right = newR;\r\n        set_Height();\r\n    }\r\n\r\n    void set_father(const std::shared_ptr<Node> &new_father) {\r\n        father = new_father;\r\n        set_Height();\r\n    }\r\n\r\n    std::shared_ptr<Node> get_father() const {\r\n        return father;\r\n    }\r\n\r\n    bool operator==(const Node<Key, Data> &other) const {\r\n        return key == other.key;\r\n    }\r\n\r\n    int get_Height() const {\r\n        return height;\r\n    }\r\n\r\n    int get_BF() const {\r\n        return BF;\r\n    }\r\n\r\n    void set_BF() {\r\n        int leftH = (left == nullptr) ? -1 : left->height;\r\n        int rightH = (right == nullptr) ? -1 : right->height;\r\n        BF = leftH - rightH;\r\n    }\r\n\r\n    void set_Height() {\r\n        int leftH = (left == nullptr) ? -1 : left->height;\r\n        int rightH = (right == nullptr) ? -1 : right->height;\r\n        height = std::max(leftH, rightH) + 1;\r\n    }\r\n\r\n    test for us\r\n};\r\n\r\n#endif\r\n\r\n// Path: AVLTree.h\r\n\r\nmy name is amir\r\n\r\n\r\nhelloo
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ds_wet1/Node.h b/ds_wet1/Node.h
+--- a/ds_wet1/Node.h	(revision 5ce456e5c9e90308f59576ef3674a0c7f1e26306)
++++ b/ds_wet1/Node.h	(date 1707499766113)
+@@ -102,8 +102,3 @@
+ #endif
+ 
+ // Path: AVLTree.h
+-
+-my name is amir
+-
+-
+-helloo
+\ No newline at end of file
