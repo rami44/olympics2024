@@ -20,7 +20,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="hrlllleoeo" />
+    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="hrlllleoeo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/wet1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/wet1.exe" afterDir="false" />
+    </list>
+    <list id="04c5a4d8-390a-4b3c-9e26-ae92df076799" name="Changes by Rami" comment="">
+      <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +40,9 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="Amir" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -138,16 +151,5 @@
     <MESSAGE value="test for us" />
     <MESSAGE value="hrlllleoeo" />
     <option name="LAST_COMMIT_MESSAGE" value="hrlllleoeo" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="CMakeLineBreakpoint">
-          <url>file://$PROJECT_DIR$/CMakeLists.txt</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
