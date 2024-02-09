@@ -57,7 +57,6 @@ public:
         return right;
     }
 
-
     // update the right node
     void set_right(const std::shared_ptr<Node> &newR) {
         right = newR;
@@ -101,3 +100,7 @@ public:
 };
 
 #endif
+
+// Path: AVLTree.h
+
+my name is amir
