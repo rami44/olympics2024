@@ -1,0 +1,218 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
+#include <string>
+
+#define EXPAND_RATE 2
+
+template<typename T>
+
+class Queue {
+
+public:
+    class EmptyQueue { };
+
+    // ctor
+    Queue<T>() {
+        maxSize = 0;
+        q_size = 0;
+        data = new T[++maxSize];
+    }
+
+    // destructor
+    ~Queue() {
+        delete[] data;
+    }
+
+    // copy constructor
+    Queue(const Queue &q) {
+        data = new T[q.maxSize];
+        for (int i = 0; i < q.q_size; i++) {
+            data[i] = q.data[i];
+        }
+        q_size = q.q_size;
+        maxSize = q.maxSize;
+    }
+
+    // assignment operator
+    Queue<T> &operator=(const Queue<T> &other) {
+        if (this == &other) {
+            return *this;
+        }
+        delete[] data;
+        q_size = other.q_size;
+        maxSize = other.q_size;
+        data = new T[q_size];
+        for (int i = 0; i < q_size; i++) {
+            data[i] = other.data[i];
+        }
+        return *this;
+    }
+
+    // pushback element to last place in queue
+    void pushBack(const T &element) { // add element to end of queue
+        if (q_size < maxSize)
+            data[q_size++] = element;
+        else {
+            maxSize = maxSize * EXPAND_RATE;
+            T *newData = new T[maxSize];
+            for (int i = 0; i < q_size; i++) {
+                newData[i] = data[i];
+            }
+            newData[q_size++] = element;
+            delete[] data;
+            data = newData;
+        }
+    };
+
+    // return first element in queue
+    T &front() const {
+        if (q_size <= 0) {
+            throw EmptyQueue();
+        } else {
+            return data[0];
+        }
+    };
+
+    // remove first element in queue
+    void popFront() {
+        if (q_size <= 0) {
+            throw EmptyQueue();
+        }
+        for (int i = 0; i < q_size - 1; i++) { // move all element to the left
+            data[i] = data[i + 1];
+        }
+        q_size--;
+    };
+
+    // return size of queue
+    int size() const {
+        return q_size;
+    };
+
+    class Iterator { // CLASS ITERATOR
+    private:
+        int index;
+        int q_size;
+        T *data;
+    public:
+        Iterator(T* data, int q_size) : data(data), q_size(q_size), index(index) {}
+
+        Iterator &operator++() {
+            if(index > q_size) {
+                throw InvalidOperation();
+            }
+            ++data;
+            return *this;
+        }
+
+        Iterator operator++(int) {
+            Iterator temp = *this;
+            data++;
+            return temp;
+        }
+
+        bool operator!=(const Iterator &other) const {
+            return data != other.data;
+        }
+
+        T &operator*() const {
+            return *data;
+        }
+
+        class InvalidOperation{};
+
+    };  // end of class Iterator
+
+    class ConstIterator { // CLASS CONST ITERATOR
+    private:
+        const T *data;
+        int q_size;
+        int index;
+    public:
+        ConstIterator(const T *data,int q_size) : data(data),q_size(q_size) {
+//            index=
+        }
+
+        ConstIterator &operator++() {
+//            if(index > q_size) {
+//                throw InvalidOperation();
+//            }
+            ++data;
+            return *this;
+        }
+
+        ConstIterator operator++(int) {
+            ConstIterator temp = *this;
+            data++;
+            return temp;
+        }
+
+        bool operator!=(const ConstIterator &other) const {
+            return data != other.data;
+        }
+
+        const T &operator*() const {
+            return *data;
+        }
+
+        class InvalidOperation{};
+
+    }; // end of class constIterator
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+
+    Iterator begin() {
+        return Iterator(data, q_size);
+    }
+
+    Iterator end() {
+        if(q_size==0) {
+            return Iterator(data + q_size + 1, q_size);
+        }
+        return Iterator(data + q_size, q_size);
+    }
+
+
+    ConstIterator begin() const {
+        return ConstIterator(data, q_size);
+    }
+
+    ConstIterator end() const {
+        if(q_size==0) {
+            return ConstIterator(data + q_size + 1, q_size);
+        }
+        return ConstIterator(data + q_size, q_size);
+    }
+
+private:
+    T *data;
+    int q_size;
+    int maxSize;
+
+}; // end of Queue class
+
+
+template<class T, class Obj>
+Queue<T> filter(const Queue<T> &q, Obj predicate) {
+    Queue<T> result;
+    for (auto it = q.begin(); it != q.end(); ++it) {
+        T cur = *it;
+        if (predicate(cur)) {
+            result.pushBack(cur);
+        }
+    }
+    return result;
+}
+
+
+template<class T, class Obj>
+Queue<T> &transform(Queue<T> &q, Obj set) {
+    for (auto it = q.begin(); it != q.end(); ++it) {
+        set(*it);
+    }
+    return q;
+}
+
+#endif
