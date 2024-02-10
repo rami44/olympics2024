@@ -244,7 +244,7 @@ public:
     }
 
 
-   //updating the height and balance factor of each node that took part in the inserting
+    //updating the height and balance factor of each node that took part in the inserting
     void update_tree_stats(const std::shared_ptr<Node<Key,Data>>& leaf) {
         std::shared_ptr<Node<Key, Data>> current_node = leaf;
         while (current_node != nullptr) {
@@ -268,17 +268,17 @@ public:
         update_tree_stats(leaf);
     }
 
-        bool insert_node(const std::shared_ptr<Node<Key,Data>>& new_node) {
+    bool insert_node(const std::shared_ptr<Node<Key,Data>>& new_node) {
         if(node_exists((new_node)))
             return false;//node already in the tree
-            if (numOfNodes==0) {
-                root=new_node;
-                root->set_right(nullptr);
-                root->set_left(nullptr);
-                numOfNodes++;
-                maxNode=new_node;
-                return true;
-            }
+        if (numOfNodes==0) {
+            root=new_node;
+            root->set_right(nullptr);
+            root->set_left(nullptr);
+            numOfNodes++;
+            maxNode=new_node;
+            return true;
+        }
         Key k=new_node->get_Key();
         std::shared_ptr<Node<Key,Data>> tmp=root;
         std::shared_ptr<Node<Key,Data>> last=tmp;
