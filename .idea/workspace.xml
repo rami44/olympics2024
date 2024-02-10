@@ -11,21 +11,37 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="wet1" targetName="wet1" />
+      <config projectName="wet1" targetName="binary_tree.h" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="hrlllleoeo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="rotations and apply roll">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+>>>>>>> 54e1688d8c212e9971584c7dd8829ec211e1a194
+      <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" afterDir="false" />
+    </list>
+    <list id="ff3d4e84-625b-4740-aed1-224f2da0c25e" name="Changes by amir" comment="">
       <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
     </list>
-    <list id="04c5a4d8-390a-4b3c-9e26-ae92df076799" name="Changes by Rami" comment="" />
+    <list id="04c5a4d8-390a-4b3c-9e26-ae92df076799" name="Changes by Rami" comment="">
+      <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,8 +76,34 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/ds_wet1/binary_tree.h">
+      <ranges>
+<<<<<<< HEAD
+        <range start1="31" end1="31" start2="31" end2="35" changelist="04c5a4d8-390a-4b3c-9e26-ae92df076799" />
+        <range start1="240" end1="240" start2="244" end2="310" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+=======
+        <range start1="0" end1="0" start2="0" end2="3" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="1" end1="1" start2="4" end2="5" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="4" end1="4" start2="8" end2="9" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="5" end1="5" start2="10" end2="11" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="25" end1="25" start2="31" end2="40" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="26" end1="27" start2="41" end2="42" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="87" end1="88" start2="102" end2="132" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="92" end1="93" start2="136" end2="159" changelist="ff3d4e84-625b-4740-aed1-224f2da0c25e" />
+        <range start1="97" end1="98" start2="163" end2="193" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="102" end1="103" start2="197" end2="220" changelist="ff3d4e84-625b-4740-aed1-224f2da0c25e" />
+        <range start1="123" end1="125" start2="240" end2="240" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="127" end1="127" start2="242" end2="244" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+>>>>>>> 54e1688d8c212e9971584c7dd8829ec211e1a194
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -74,28 +116,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/Rami/Desktop/bin/wet1/ds_wet1/CMakeLists.txt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="wet1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wet1" TARGET_NAME="wet1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wet1" RUN_TARGET_NAME="wet1">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rami\Desktop\bin\wet1\ds_wet1" />
+      <recent name="C:\Users\Rami\Desktop\bin\wet1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.binary_tree.h">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="binary_tree.h" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wet1" TARGET_NAME="binary_tree.h" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wet1" RUN_TARGET_NAME="binary_tree.h">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Unnamed" />
+      <item itemvalue="CMake Application.binary_tree.h" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

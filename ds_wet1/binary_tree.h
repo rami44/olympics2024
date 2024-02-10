@@ -30,6 +30,10 @@ public:
         return root;
     }
 
+    // insert
+
+
+
     void update_height_and_bf_after_rolling(const std::shared_ptr<Node<Key, Data>>& node) {
         node->get_right()->set_height();
         node->get_right()->set_BF();
@@ -237,6 +241,71 @@ public:
                 RR_rolling(rolling_node);
             }
         }
+    }
+
+
+    //updating the height and balance factor of each node that took part in the inserting
+    void update_tree_stats(const std::shared_ptr<Node<Key,Data>>& leaf) {
+        std::shared_ptr<Node<Key, Data>> current_node = leaf;
+        while (current_node != nullptr) {
+            current_node->set_height();
+            current_node->set_balance_factor();
+            current_node = current_node->get_father();
+        }
+    }
+
+
+    void update_tree_add (const std::shared_ptr<Node<Key,Data>>& leaf) {
+        update_tree_stats(leaf);//making sure all heights and bf are updated
+        std::shared_ptr<Node<Key, Data>> current_node = leaf;
+        while (current_node != nullptr && (current_node->get_balance_factor() != 2 &&
+                                           current_node->get_balance_factor() != -2)) {
+            current_node = current_node->get_father();
+        }
+        if (current_node == nullptr) return;
+        //surely bf is either 2/-2
+        apply_roll(current_node);
+        update_tree_stats(leaf);
+    }
+
+    bool insert_node(const std::shared_ptr<Node<Key,Data>>& new_node) {
+        if(node_exists((new_node)))
+            return false;//node already in the tree
+        if (numOfNodes==0) {
+            root=new_node;
+            root->set_right(nullptr);
+            root->set_left(nullptr);
+            numOfNodes++;
+            maxNode=new_node;
+            return true;
+        }
+        Key k=new_node->get_Key();
+        std::shared_ptr<Node<Key,Data>> tmp=root;
+        std::shared_ptr<Node<Key,Data>> last=tmp;
+        while(tmp!= nullptr){
+            last=tmp;
+            if(k<tmp->get_key()){
+                tmp=tmp->get_left();
+            }
+            else{
+                tmp=tmp->get_right();
+            }
+        }
+        if(last->get_key()>k){
+            last->set_left(new_node);
+        }
+        else{
+            last->set_right(new_node);
+        }
+        new_node->set_father(last);
+        numOfNodes++;
+
+        update_maxNode(root);
+        update_tree_add(new_node);
+
+
+
+        return true;
     }
 };
 
