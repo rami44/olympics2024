@@ -1,8 +1,14 @@
+#ifndef BINARY_TREE_H
+#define BINARY_TREE_H
+
 #include "Node.h"
+#include <iostream>
 #include <memory>  // Include necessary header for std::shared_ptr
 
 template<class Key, class Data>
+
 class BinaryTree {
+
 private:
     std::shared_ptr<Node<Key, Data>> root;
     int numOfNodes;
@@ -22,6 +28,15 @@ public:
     // Getter methods
     std::shared_ptr<Node<Key, Data>> get_root() const {
         return root;
+    }
+
+    void update_height_and_bf_after_rolling(const std::shared_ptr<Node<Key, Data>>& node) {
+        node->get_right()->set_height();
+        node->get_right()->set_BF();
+        node->get_left()->set_height();
+        node->get_left()->set_BF();
+        node->set_Height();
+        node->set_BF();
     }
 
     int get_numOfNodes() const {
@@ -85,22 +100,124 @@ public:
     // Rolling methods...
     // LR rotation
     void LR_rolling(const std::shared_ptr<Node<Key, Data>>& rolling_node) {
-        // Implementation...
+        Node<Key, Data> *root_father = rolling_node->get_father();
+        Node<Key, Data> *left_son_of_new_root = rolling_node->get_left();
+        Node<Key, Data> *new_root = left_son_of_new_root->get_right();
+
+        if (root_father != nullptr) {
+            if ((root_father->get_left() != nullptr) && (*(root_father->get_left()) == *rolling_node)) {
+                root_father->set_left(new_root);
+            } else {
+                root_father->set_right(new_root);
+            }
+
+            new_root->set_father(root_father);
+        } else {
+            new_root->set_father(nullptr);
+            root = new_root;
+        }
+
+        rolling_node->set_left(new_root->get_right());
+        if (rolling_node->get_left() != nullptr) rolling_node->get_left()->set_father(rolling_node);
+
+        left_son_of_new_root->set_right(new_root->get_left());
+        if (left_son_of_new_root->get_right() != nullptr)
+            left_son_of_new_root->get_right()->set_father(left_son_of_new_root);
+
+        new_root->set_right(rolling_node);
+        new_root->set_left(left_son_of_new_root);
+        new_root->get_left()->set_father(new_root);
+        new_root->get_right()->set_father(new_root);
+
+        update_height_and_bf_after_rolling(new_root);
     }
 
     // LL rotation
     void LL_rolling(const std::shared_ptr<Node<Key, Data>>& rolling_node) {
-        // Implementation...
+        std::shared_ptr<Node<Key,Data>> root_father = rolling_node->get_father();
+        std::shared_ptr<Node<Key,Data>> new_root = rolling_node->get_left();
+        if (root_father != nullptr) { // rolling_node is not the root
+            if ((root_father->get_left()!= nullptr)&&(*(root_father->get_left()) == rolling_node)){
+                root_father->set_left(new_root);
+            }
+            else {
+                root_father->set_right(new_root);
+            }
+
+            new_root->set_father(root_father);
+        }
+        else {
+            new_root->set_father(nullptr);
+            root = new_root;
+        }
+
+        rolling_node->set_father(new_root);
+        rolling_node->set_left(new_root->get_right());
+        if(rolling_node->get_left() != nullptr) rolling_node->get_left()->set_father(rolling_node);
+        new_root->set_right(rolling_node);
+
+        update_height_and_bf_after_rolling(new_root);
     }
 
     // RL rotation
     void RL_rolling(const std::shared_ptr<Node<Key, Data>>& rolling_node) {
-        // Implementation...
+        Node<Key,Data>* root_father = rolling_node->get_father();
+        Node<Key,Data>* right_son_of_new_root = rolling_node->get_right();
+        Node<Key,Data>* new_root = right_son_of_new_root->get_left();
+
+        if (root_father != nullptr){
+            if ((root_father->get_left()!= nullptr)&&(*(root_father->get_left()) == *rolling_node)){
+                root_father->set_left(new_root);
+            }
+            else {
+                root_father->set_right(new_root);
+            }
+            new_root->set_father(root_father);
+        }
+        else{
+            new_root->set_father(nullptr);
+            root = new_root;
+        }
+
+        rolling_node->set_right(new_root->get_left());
+        if(rolling_node->get_right() != nullptr) rolling_node->get_right()->set_father(rolling_node);
+
+        right_son_of_new_root->set_left(new_root->get_right());
+        if(right_son_of_new_root->get_left() != nullptr) right_son_of_new_root->get_left()->set_father(right_son_of_new_root);
+
+        new_root->set_right(right_son_of_new_root);
+        new_root->set_left(rolling_node);
+        new_root->get_left()->set_father(new_root);
+        new_root->get_right()->set_father(new_root);
+
+        update_height_and_bf_after_rolling(new_root);
     }
 
     // RR rotation
     void RR_rolling(const std::shared_ptr<Node<Key, Data>>& rolling_node) {
-        // Implementation...
+        std::shared_ptr<Node<Key,Data>> root_father = rolling_node->get_father();
+        std::shared_ptr<Node<Key,Data>> new_root = rolling_node->get_right();
+        if (root_father != nullptr) { // rolling_node is not the root
+            if ((root_father->get_left()!= nullptr)&&(*(root_father->get_left()) == rolling_node)){
+                root_father->set_left(new_root);
+            }
+            else {
+                root_father->set_right(new_root);
+            }
+
+            new_root->set_father(root_father);
+        }
+        else {
+            new_root->set_father(nullptr);
+            root = new_root;
+        }
+
+        rolling_node->set_father(new_root);
+        rolling_node->set_right(new_root->get_left());
+        if(rolling_node->get_right() != nullptr) rolling_node->get_right()->set_father(rolling_node);
+        new_root->set_left(rolling_node);
+
+        update_height_and_bf_after_rolling(new_root);
     }
 
     // Apply rotation
@@ -121,6 +238,6 @@ public:
             }
         }
     }
-
-
 };
+
+#endif
