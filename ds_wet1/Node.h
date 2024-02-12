@@ -6,7 +6,7 @@
 template<class Key, class Data>
 class Node {
 private:
-    const Key key;
+    Key key;
     std::shared_ptr<Data> data;
     std::shared_ptr<Node> left;
     std::shared_ptr<Node> father;
@@ -28,6 +28,15 @@ public:
     Key get_key() const {
         return key;
     }
+
+    void set_key(Key new_key) {
+        key = new_key;
+    }
+
+    void set_data(std::shared_ptr<Data> new_data){
+        data = new_data;
+    }
+
 
     //return the data
     std::shared_ptr<Data> get_data() const {
