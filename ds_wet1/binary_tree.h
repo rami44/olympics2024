@@ -43,8 +43,6 @@ public:
     }
 
 
-    // insert
-
     void update_height_and_bf_after_rolling(const std::shared_ptr<Node<Key, Data>> &node) {
         node->get_right()->set_Height();
         node->get_right()->set_BF();
@@ -55,15 +53,21 @@ public:
     }
 
     // switch nodes
-    void swap_keys_data(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
+    void swap_keys(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
+        Key temp_key = node1->get_key();
         node1->set_key(node2->get_key());
+        node2->set_key(temp_key);
+    }
+
+    void swap_data(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
+        std::shared_ptr<Data> temp_data = node1->get_data();
         node1->set_data(node2->get_data());
-        node2->set_key(node1->get_key());
-        node2->set_data(node1->get_data());
+        node2->set_data(temp_data);
     }
 
     void switch_nodes(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
-        swap_keys_data(node1, node2);
+        swap_keys(node1, node2);
+        swap_keys(node1, node2);
     }
 
     int get_numOfNodes() const {
@@ -269,7 +273,6 @@ public:
             current_node = current_node->get_father();
         }
     }
-
 
     void update_tree_add(const std::shared_ptr<Node<Key, Data>> &leaf) {
         update_tree_stats(leaf);//making sure all heights and bf are updated
