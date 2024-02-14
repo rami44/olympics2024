@@ -53,21 +53,17 @@ public:
     }
 
     // switch nodes
-    void swap_keys(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
+    void swap_keys_data(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
         Key temp_key = node1->get_key();
-        node1->set_key(node2->get_key());
-        node2->set_key(temp_key);
-    }
-
-    void swap_data(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
         std::shared_ptr<Data> temp_data = node1->get_data();
+        node1->set_key(node2->get_key());
         node1->set_data(node2->get_data());
+        node2->set_key(temp_key);
         node2->set_data(temp_data);
     }
 
     void switch_nodes(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
-        swap_keys(node1, node2);
-        swap_keys(node1, node2);
+        swap_keys_data(node1, node2);
     }
 
     int get_numOfNodes() const {
@@ -287,7 +283,17 @@ public:
         update_tree_stats(leaf);
     }
 
-    bool insert_node( std::shared_ptr<Node<Key, Data>> &new_node) {
+    bool insert_key(const Key& key) {
+        if (get_node_from_key(key) == nullptr) {
+            std::shared_ptr<Node<Key, Data>> new_node =
+                    std::make_shared<Node<Key, Data>>(key, std::make_shared<int>(0));
+            insert_node(new_node);
+            return true;
+        }
+        return false;
+    }
+
+    bool insert_node(std::shared_ptr<Node<Key, Data>> &new_node) {
         if (node_exists(new_node, root))
             return false;//node already in the tree
         if (numOfNodes == 0) {
@@ -339,6 +345,28 @@ public:
         }
     }
 
+    std::shared_ptr<Node<Key, Data>> get_node_from_key(const Key &key) {
+        std::shared_ptr<Node<Key, Data>> tmp = root;
+        while (tmp != nullptr) {
+            if (tmp->get_key() == key) {
+                return tmp;
+            }
+            if (key < tmp->get_key()) {
+                tmp = tmp->get_left();
+            } else {
+                tmp = tmp->get_right();
+            }
+        }
+        return nullptr;
+    }
+
+    bool delete_key(const Key &key) {
+        std::shared_ptr<Node<Key, Data>> node = get_node_from_key(key);
+        if (node == nullptr) return false;
+        delete_node(node);
+        return true;
+    }
+
     // delete node from the tree
     void delete_node(std::shared_ptr<Node<Key, Data>>& node) {
         // if the node has no children (leaf)
@@ -373,14 +401,13 @@ public:
                 }
                 fix_avl_after_deletion(node);
                 return;
-            } else { // node = 2
+            } else {
                 // if the node has two children
                 std::shared_ptr<Node<Key, Data>> successor = node->get_right();
                 while (successor->get_left() != nullptr) { // find the successor
                     successor = successor->get_left();
                 }
                 switch_nodes(node, successor);
-
                 delete_node(successor); // delete the successor as it is now leaf
                 return;
             }

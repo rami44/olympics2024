@@ -20,13 +20,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="RL RR LL LR">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="insert test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/Node.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" afterDir="false" />
+    </list>
+    <list id="170e34ab-11e5-4c42-bf99-98d9f71f0617" name="Changes by amir" comment="">
+      <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
     </list>
     <list id="04c5a4d8-390a-4b3c-9e26-ae92df076799" name="Changes by Rami" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +62,24 @@
         <option name="url" value="https://github.com/rami44/wet1.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/ds_wet1/binary_tree.h">
+      <ranges>
+        <range start1="55" end1="56" start2="55" end2="56" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="57" end1="57" start2="57" end2="58" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="58" end1="63" start2="59" end2="59" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="64" end1="64" start2="60" end2="61" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="68" end1="70" start2="65" end2="66" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="288" end1="288" start2="284" end2="294" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="289" end1="290" start2="295" end2="296" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="329" end1="330" start2="335" end2="336" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="334" end1="337" start2="340" end2="341" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="341" end1="341" start2="345" end2="367" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="375" end1="376" start2="401" end2="402" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="382" end1="383" start2="408" end2="408" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,11 +127,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="binary_tree.h" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wet1" TARGET_NAME="binary_tree.h" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wet1" RUN_TARGET_NAME="binary_tree.h">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -138,6 +151,7 @@
       <workItem from="1707508305921" duration="3201000" />
       <workItem from="1707515508076" duration="68000" />
       <workItem from="1707548444066" duration="1774000" />
+      <workItem from="1707927958502" duration="9711000" />
     </task>
     <task id="LOCAL-00001" summary="test for us">
       <created>1707498791279</created>
@@ -160,7 +174,28 @@
       <option name="project" value="LOCAL" />
       <updated>1707499599283</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="RL RR LL LR">
+      <created>1707725950565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707725950565</updated>
+    </task>
+    <task id="LOCAL-00005" summary="insert test">
+      <created>1707930666674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707930666674</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes by amir">
+      <created>1707930682691</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707930682691</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +215,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test for us" />
     <MESSAGE value="hrlllleoeo" />
-    <option name="LAST_COMMIT_MESSAGE" value="hrlllleoeo" />
+    <MESSAGE value="RL RR LL LR" />
+    <MESSAGE value="insert test" />
+    <MESSAGE value="Changes by amir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by amir" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="tmp.get()-&gt;data" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
