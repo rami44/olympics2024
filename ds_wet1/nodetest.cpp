@@ -17,14 +17,25 @@ int main() {
     std::shared_ptr<Node<int, int>> node1 = std::make_shared<Node<int, int>>(1, std::make_shared<int>(1));
     std::shared_ptr<Node<int, int>> node2 = std::make_shared<Node<int, int>>(2, std::make_shared<int>(2));
     std::shared_ptr<Node<int, int>> node3 = std::make_shared<Node<int, int>>(3, std::make_shared<int>(3));
-    std::shared_ptr<Node<int, int>> node4 = std::make_shared<Node<int, int>>(10, std::make_shared<int>(10));
-    std::shared_ptr<Node<int, int>> node5 = std::make_shared<Node<int, int>>(15, std::make_shared<int>(15));
-    std::shared_ptr<Node<int, int>> node6 = std::make_shared<Node<int, int>>(20, std::make_shared<int>(20));
+    std::shared_ptr<Node<int, int>> node4 = std::make_shared<Node<int, int>>(15, std::make_shared<int>(15));
+    std::shared_ptr<Node<int, int>> node5 = std::make_shared<Node<int, int>>(80, std::make_shared<int>(80));
+    std::shared_ptr<Node<int, int>> node6 = std::make_shared<Node<int, int>>(7, std::make_shared<int>(7));
+    std::shared_ptr<Node<int, int>> node7 = std::make_shared<Node<int, int>>(90, std::make_shared<int>(90));
+    std::shared_ptr<Node<int, int>> node8 = std::make_shared<Node<int, int>>(13, std::make_shared<int>(13));
+    std::shared_ptr<Node<int, int>> node9 = std::make_shared<Node<int, int>>(12, std::make_shared<int>(12));
+    std::shared_ptr<Node<int, int>> node10 = std::make_shared<Node<int, int>>(91, std::make_shared<int>(91));
+
     // Insert nodes into the binary tree
     binary_tree.insert_node(node1);
     binary_tree.insert_node(node2);
     binary_tree.insert_node(node3);
     binary_tree.insert_node(node4);
+    binary_tree.insert_node(node5);
+    binary_tree.insert_node(node6);
+    binary_tree.insert_node(node7);
+    binary_tree.insert_node(node8);
+    binary_tree.insert_node(node9);
+    binary_tree.insert_node(node10);
     binary_tree.insert_node(node5);
     binary_tree.insert_node(node6);
 
