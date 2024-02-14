@@ -333,14 +333,12 @@ public:
         numOfNodes--;
         std::shared_ptr<Node<Key, Data>> tmp = deletion_node->get_father();
         while (tmp != nullptr) { // go up the tree and fix the BF and height until the root
-            int old_h = tmp->get_Height(); // save the old height
+
             tmp->set_Height();
             tmp->set_BF();
             if (tmp->get_BF() == 2 || tmp->get_BF() == -2) { // need to apply roll
                 apply_roll(tmp);
-            }
-            if (old_h == tmp->get_Height()) // stop if the height didn't change
-                return;
+            } //      return;
             tmp = tmp->get_father(); // go up the tree
         }
     }
