@@ -9,4 +9,10 @@ add_executable(
         binary_tree.h
         Node.h
         nodetest.cpp
+        Olympicsa1.cpp
+        Olympicsa1.h
+        wet1util.h
+        contestant.cpp
+        team.cpp
+        country.cpp
     )

@@ -16,6 +16,8 @@
 #define STREAMINGDBA1_H_
 
 #include "wet1util.h"
+#include "Olympicsa1.h"
+
 
 class Olympics {
 private:
