@@ -6,13 +6,13 @@
 #include <memory>  // Include necessary header for std::shared_ptr
 
 template<class Key, class Data>
-
 class BinaryTree {
 
 private:
-    std::shared_ptr<Node<Key, Data>> root;
+    Node<Key, Data>* root;
     int numOfNodes;
-    std::shared_ptr<Node<Key, Data>> maxNode;
+    Node<Key, Data>* maxNode;
+    Node<Key, Data>* minNode;
 
 public:
     // Constructor
@@ -27,23 +27,32 @@ public:
     BinaryTree &operator=(const BinaryTree<Key, Data> &other) = delete;
 
     // Getter methods
-    std::shared_ptr<Node<Key, Data>> get_root() const {
+    Node<Key, Data>* get_root() const {
         return root;
     }
 
-
-    std::shared_ptr<Node<Key, Data>> minNode(std::shared_ptr<Node<Key, Data>> node) {
-        std::shared_ptr<Node<Key, Data>> current = node;
-
-        /* loop down to find the leftmost leaf */
-        while (current->left != nullptr)
-            current = current->left;
-
-        return current;
+    void delete_tree() {
+        Node<Key,Data>* curr = root;
+        post_order_delete(curr);
+        root = nullptr;
+    }
+    void post_order_delete(const Node<Key,Data>* curr) {
+        if (curr == nullptr) return;
+        post_order_delete(curr->get_left());
+        post_order_delete(curr->get_right());
+        delete curr;
     }
 
+//    Node<Key,Data>* minNode(Node<Key,Data>* node) {
+//        Node<Key,Data>* current = node;
+//        /* loop down to find the leftmost leaf */
+//        while (current->left != nullptr)
+//            current = current->left;
+//
+//        return current;
+//    }
 
-    void update_height_and_bf_after_rolling(const std::shared_ptr<Node<Key, Data>> &node) {
+    void update_height_and_bf_after_rolling(Node<Key, Data>* node) {
         node->get_right()->set_Height();
         node->get_right()->set_BF();
         node->get_left()->set_Height();
@@ -53,7 +62,7 @@ public:
     }
 
     // switch nodes
-    void swap_keys_data(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
+    void swap_keys_data(Node<Key, Data>* node1, Node<Key, Data>* node2) {
         Key temp_key = node1->get_key();
         std::shared_ptr<Data> temp_data = node1->get_data();
         node1->set_key(node2->get_key());
@@ -62,19 +71,33 @@ public:
         node2->set_data(temp_data);
     }
 
-    void switch_nodes(std::shared_ptr<Node<Key, Data>> node1, std::shared_ptr<Node<Key, Data>> node2) {
+    void switch_nodes(Node<Key, Data>* node1, Node<Key, Data>* node2) {
         swap_keys_data(node1, node2);
     }
+
+
+    // find node with key
+    Node<Key,Data>* find_node(const Key& key) {
+        return find_node_aux(key, root);
+    }
+
+    Node<Key,Data>* find_node_aux(const Key& key, Node<Key,Data>* curr) {
+        if (curr == nullptr) return nullptr;
+        if (key == curr->get_key()) return curr;
+        if (key < curr->get_key()) return find_node_aux(key, curr->get_left());
+        return find_node_aux(key, curr->get_right());
+    }
+
 
     int get_numOfNodes() const {
         return numOfNodes;
     }
 
-    std::shared_ptr<Node<Key, Data>> get_maxNode() const {
+    Node<Key,Data>* get_maxNode() const {
         return maxNode;
     }
 
-    void update_maxNode(const std::shared_ptr<Node<Key, Data>> &curr) {
+    void update_maxNode(Node<Key,Data>* curr) {
         if (curr == nullptr) return;
         maxNode = curr;
         update_maxNode(curr->get_right());
@@ -293,7 +316,7 @@ public:
         return false;
     }
 
-    bool insert_node(std::shared_ptr<Node<Key, Data>> &new_node) {
+    bool insert_node(Node<Key, Data>* new_node) {
         if (node_exists(new_node, root))
             return false;//node already in the tree
         if (numOfNodes == 0) {
@@ -305,8 +328,8 @@ public:
             return true;
         }
         Key k = new_node->get_key();
-        std::shared_ptr<Node<Key, Data>> tmp = root;
-        std::shared_ptr<Node<Key, Data>> last = tmp;
+        Node<Key, Data>* tmp = root;
+        Node<Key, Data>* last = tmp;
         while (tmp != nullptr) {
             last = tmp;
             if (k < tmp->get_key()) {
@@ -328,10 +351,9 @@ public:
 
         return true;
     }
-
-    void fix_avl_after_deletion(std::shared_ptr<Node<Key, Data>> &deletion_node) {
+    void fix_avl_after_deletion(Node<Key, Data>* deletion_node) {
         numOfNodes--;
-        std::shared_ptr<Node<Key, Data>> tmp = deletion_node->get_father();
+        Node<Key, Data>* tmp = deletion_node->get_father();
         while (tmp != nullptr) { // go up the tree and fix the BF and height until the root
 
             tmp->set_Height();
@@ -366,7 +388,7 @@ public:
     }
 
     // delete node from the tree
-    void delete_node(std::shared_ptr<Node<Key, Data>>& node) {
+    void delete_node(Node<Key,Data>* node) {
         // if the node has no children (leaf)
         if (node->get_Height() == 0) { // leaf
             if (node->get_father() == nullptr) { // single node in the tree
@@ -376,40 +398,48 @@ public:
                     node->get_father()->set_left(nullptr);
                 } else { // right child
                     node->get_father()->set_right(nullptr);
-                    }
                 }
-                fix_avl_after_deletion(node);
-                return;
             }
-            // if the node has only one child
-            if (node->get_left() == nullptr && node->get_right() != nullptr ||
-                node->get_left() != nullptr && node->get_right() == nullptr) {
-                std::shared_ptr<Node<Key, Data>> child = (node->get_left() == nullptr) ? node->get_right()
-                                                                                       : node->get_left();
-                if (node->get_father() == nullptr) { // node is the root
-                    root = child;
-                    child->set_father(nullptr);
-                } else { // node is not the root
-                    if (node->get_father()->get_left() == node) { // left child
-                        node->get_father()->set_left(child);
-                    } else { // right child
-                        node->get_father()->set_right(child);
-                    }
-                    child->set_father(node->get_father());
-                }
-                fix_avl_after_deletion(node);
-                return;
-            } else {
-                // if the node has two children
-                std::shared_ptr<Node<Key, Data>> successor = node->get_right();
-                while (successor->get_left() != nullptr) { // find the successor
-                    successor = successor->get_left();
-                }
-                switch_nodes(node, successor);
-                delete_node(successor); // delete the successor as it is now leaf
-                return;
-            }
+
+            fix_avl_after_deletion(node);
+            delete node;
+            update_maxNode(root);
+            update_minNode(root);
+            return;
         }
+        // if the node has only one child
+        if (node->get_left() == nullptr && node->get_right() != nullptr ||
+            node->get_left() != nullptr && node->get_right() == nullptr) {
+            Node<Key,Data>* child = (node->get_left() == nullptr) ? node->get_right()
+                                                                                   : node->get_left();
+            if (node->get_father() == nullptr) { // node is the root
+                root = child;
+                child->set_father(nullptr);
+            } else { // node is not the root
+                if (node->get_father()->get_left() == node) { // left child
+                    node->get_father()->set_left(child);
+                } else { // right child
+                    node->get_father()->set_right(child);
+                }
+                child->set_father(node->get_father());
+            }
+            fix_avl_after_deletion(node);
+            delete node;
+            update_maxNode(root);
+            update_minNode(root);
+            return;
+        } else {
+            // if the node has two children
+            Node<Key,Data>* successor = node->get_right();
+            while (successor->get_left() != nullptr) { // find the successor
+                successor = successor->get_left();
+            }
+            switch_nodes(node, successor);
+            delete_node(successor); // delete the successor node after
+            // it got the data of the desired node to be deleted
+            return;
+        }
+    }
 };
 
 #endif

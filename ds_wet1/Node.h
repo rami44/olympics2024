@@ -37,7 +37,6 @@ public:
         data = new_data;
     }
 
-
     //return the data
     std::shared_ptr<Data> get_data() const {
         return data;
