@@ -136,9 +136,14 @@ public:
         pre_order(functionPointer, curr->get_right());
     }
 
-    // Post-order traversal
+///////////////////////////////////////////////
+    void delete_internal(const Node<Key, Data>* node) {
+        if (node == nullptr) return;
+        node->get_data().delete_internal_trees();
+    }
+
     template<class Func>
-    void post_order(Func functionPointer, std::shared_ptr<Node<Key, Data>> curr) {
+    void post_order(Func functionPointer,const Node<Key,Data>* curr) {
         if (curr == nullptr) return;
         post_order(functionPointer, curr->get_left());
         post_order(functionPointer, curr->get_right());

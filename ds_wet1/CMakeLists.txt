@@ -8,7 +8,7 @@ include_directories(.)
 add_executable(
         binary_tree.h
         Node.h
-        nodetest.cpp
+        OlympicsTest.cpp
         Olympicsa1.cpp
         Olympicsa1.h
         wet1util.h

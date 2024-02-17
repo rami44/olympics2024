@@ -19,9 +19,18 @@ public:
 
     // Accessors
     int get_id() const;
+
     Sport get_sport() const;
-    int get_strength() const;
-    const Node<int, Country>* get_country() const;
+
+    int& get_strength();
+
+    void set_strength(int new_strength);
+
+
+    int& get_num_of_teams();
+    void set_num_of_teams();
+
+    Node<int,Country>* get_country();
 
 
     void set_strength(int new_strength);

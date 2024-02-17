@@ -21,12 +21,13 @@
 #include "country.h"
 
 class Olympics {
-private:
+//private:
+    public://for test only
     BinaryTree<int,Country> countries;
     BinaryTree<int,Team> teams;
     BinaryTree<int,Contestant> contestants;
 
-public:
+//public:
     // <DO-NOT-MODIFY> {
 
     Olympics();

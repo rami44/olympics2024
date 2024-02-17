@@ -63,8 +63,6 @@ int main() {
     binary_tree.post_order(print_node<int, int>, binary_tree.get_root());
     std::cout << std::endl;
 
-
-
     binary_tree.delete_tree();
 
     std::cout << "In-order traversal (after delete_tree): ";

@@ -31,20 +31,63 @@ private:
 public:
 
     // Constructor
-    Team(int teamId, Sport sport,  Node<int, Country> *country, int team_strength = 0, int num_contestants = 0);
+    Team(int teamId, Sport sport, Node<int, Country> *country, int team_strength = 0, int num_contestants = 0);
+
+    struct Deleter {
+    public:
+        void operator()(const Node<int, Team> *node) const {
+            if (node == nullptr) return;
+            node->get_data()->delete_internal_trees();
+        }
+    };
+
+    void move_node(BinaryTree<int, Contestant> &from_id, BinaryTree<int, Contestant> &to_id,
+                      BinaryTree<int, int> &to_strength, Node<int, Contestant> *node);
+
+    // remove contestant
+    void remove_contestant(int contestantId);
 
     // GETTERS AND SETTERS
-    int getTeamId();
 
-    Sport getSport();
+    // get tree id1
+
+    BinaryTree<int, Contestant> *get_tree_id1();
+
+    // get tree id2
+
+    BinaryTree<int, Contestant> *get_tree_id2();
+
+    // get tree id3
+
+    BinaryTree<int, Contestant> *get_tree_id3();
+
+
+    // get team_country
+
+    BinaryTree<int, int> *get_tree_strength1();
+
+    // get tree strength2
+
+    BinaryTree<int, int> *get_tree_strength2();
+
+    // get tree strength3
+
+    BinaryTree<int, int> *get_tree_strength3();
+
+
+    Node<int,Country>* get_country();
+
+    int getTeamId() const;
+
+    Sport get_sport() const;
 
     int &getNumContestants();
 
-    int &getTeamStrength();
+    int& getTeamStrength();
 
-    std::shared_ptr<int> getCountryId();
+    void delete_internal_trees();
 
-    BinaryTree<int, Contestant>* find_id_tree(int contestantId);
+    BinaryTree<int, Contestant> *find_id_tree(int contestantId);
 
     // divide contestants into thirds based on their strength, id and insert into corresponding trees
     void add_contestant_to_tree(int contestantId, Sport sport, int strength);
