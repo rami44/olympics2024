@@ -20,14 +20,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="added alll olympics classes and finished add_contestant_to_tree">
+    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="remove_contestant">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/Olympicsa1.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/Olympicsa1.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/contestant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/contestant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/nodetest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ds_wet1/olympicsTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/olympicsTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/team.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/team.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.h" afterDir="false" />
     </list>
@@ -37,6 +31,9 @@
       <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/contestant.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/contestant.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/contestant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/contestant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/country.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/country.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/country.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/country.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/team.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.cpp" afterDir="false" />
     </list>
     <list id="04c5a4d8-390a-4b3c-9e26-ae92df076799" name="Changes by Rami" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,39 +71,34 @@
     </option>
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/ds_wet1/contestant.h">
+    <file path="$PROJECT_DIR$/ds_wet1/team.cpp">
       <ranges>
-        <range start1="14" end1="15" start2="14" end2="19" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="17" end1="18" start2="21" end2="23" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="21" end1="21" start2="26" end2="27" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="22" end1="24" start2="28" end2="38" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="26" end1="28" start2="40" end2="49" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/ds_wet1/binary_tree.h">
-      <ranges>
-        <range start1="18" end1="19" start2="18" end2="19" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="98" end1="98" start2="98" end2="101" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="105" end1="105" start2="108" end2="114" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="107" end1="109" start2="116" end2="118" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="122" end1="123" start2="131" end2="132" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="131" end1="132" start2="140" end2="141" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="138" end1="139" start2="147" end2="153" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="140" end1="141" start2="154" end2="155" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="149" end1="153" start2="163" end2="167" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="184" end1="187" start2="198" end2="201" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="209" end1="213" start2="223" end2="227" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="242" end1="245" start2="256" end2="259" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="267" end1="268" start2="281" end2="282" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="286" end1="288" start2="300" end2="302" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="295" end1="296" start2="309" end2="310" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="297" end1="298" start2="311" end2="312" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="308" end1="309" start2="322" end2="323" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="310" end1="312" start2="324" end2="326" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="327" end1="327" start2="341" end2="342" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="349" end1="349" start2="364" end2="365" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="367" end1="369" start2="383" end2="385" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="383" end1="384" start2="399" end2="400" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="4" end1="5" start2="4" end2="5" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="17" end1="17" start2="17" end2="81" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="23" end1="23" start2="87" end2="89" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="24" end1="30" start2="90" end2="91" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="35" end1="35" start2="96" end2="98" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="36" end1="42" start2="99" end2="100" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="47" end1="47" start2="105" end2="107" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="48" end1="54" start2="108" end2="109" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="99" end1="99" start2="154" end2="155" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="123" end1="124" start2="179" end2="181" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="132" end1="132" start2="189" end2="191" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="137" end1="137" start2="196" end2="204" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="153" end1="154" start2="220" end2="221" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="160" end1="164" start2="227" end2="231" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="165" end1="169" start2="232" end2="235" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="192" end1="193" start2="258" end2="259" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="195" end1="197" start2="261" end2="263" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="203" end1="204" start2="269" end2="270" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="213" end1="214" start2="279" end2="280" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="216" end1="218" start2="282" end2="284" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="224" end1="225" start2="290" end2="291" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="234" end1="235" start2="300" end2="301" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="237" end1="238" start2="303" end2="304" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="244" end1="245" start2="310" end2="311" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="253" end1="254" start2="319" end2="319" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="268" end1="268" start2="333" end2="334" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
       </ranges>
     </file>
   </component>
@@ -156,11 +148,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="binary_tree.h" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wet1" TARGET_NAME="binary_tree.h" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="wet1" RUN_TARGET_NAME="binary_tree.h">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -188,7 +175,8 @@
       <workItem from="1707927958502" duration="10859000" />
       <workItem from="1708003154746" duration="15770000" />
       <workItem from="1708067401400" duration="32386000" />
-      <workItem from="1708151732526" duration="17113000" />
+      <workItem from="1708151732526" duration="18042000" />
+      <workItem from="1708287564042" duration="15220000" />
     </task>
     <task id="LOCAL-00001" summary="test for us">
       <created>1707498791279</created>
@@ -253,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708120184003</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="remove_contestant">
+      <created>1708171664469</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708171664469</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +273,8 @@
     <MESSAGE value="finish" />
     <MESSAGE value="Changes by amir" />
     <MESSAGE value="added alll olympics classes and finished add_contestant_to_tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="added alll olympics classes and finished add_contestant_to_tree" />
+    <MESSAGE value="remove_contestant" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove_contestant" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
