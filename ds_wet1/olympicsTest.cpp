@@ -133,5 +133,9 @@ int main() {
             olympics.teams.get_root()->get_data()->get_tree_strength3()->get_root());
     std::cout << std::endl;
 
+
+    //remove contestant from team
+
+
     return 0; // Return zero to indicate success
 }

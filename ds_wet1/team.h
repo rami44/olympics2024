@@ -41,11 +41,14 @@ public:
         }
     };
 
-    void move_node(BinaryTree<int, Contestant> &from_id, BinaryTree<int, Contestant> &to_id,
-                      BinaryTree<int, int> &to_strength, Node<int, Contestant> *node);
+    void move_node(BinaryTree<int, Contestant> &sourceTree_id, BinaryTree<int, Contestant> &destTree_id,
+                         BinaryTree<int, int> &sourceTree_strength, BinaryTree<int, int> &desTree_strength,
+                         Node<int, Contestant> *moving_node);
 
     // remove contestant
     void remove_contestant(int contestantId);
+
+    void update_strength(int old_strength, int new_strength, BinaryTree<int, int> &tree);
 
     // GETTERS AND SETTERS
 
@@ -92,6 +95,8 @@ public:
     // divide contestants into thirds based on their strength, id and insert into corresponding trees
     void add_contestant_to_tree(int contestantId, Sport sport, int strength);
 
+    //rearrange contesant trees after removing contestant
+    void re_arrange_trees();
 };
 
 #endif //TEAM_H
