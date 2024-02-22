@@ -9,10 +9,10 @@ template<class Key, class Data>
 class BinaryTree {
 
 private:
-    Node<Key, Data>* root;
+    Node<Key, Data> *root;
     int numOfNodes;
-    Node<Key, Data>* maxNode;
-    Node<Key, Data>* minNode;
+    Node<Key, Data> *maxNode;
+    Node<Key, Data> *minNode;
 
 public:
     // Constructor
@@ -32,11 +32,12 @@ public:
     }
 
     void delete_tree() {
-        Node<Key,Data>* curr = root;
+        Node<Key, Data> *curr = root;
         post_order_delete(curr);
         root = nullptr;
     }
-    void post_order_delete(const Node<Key,Data>* curr) {
+
+    void post_order_delete(const Node<Key, Data> *curr) {
         if (curr == nullptr) return;
         post_order_delete(curr->get_left());
         post_order_delete(curr->get_right());
@@ -52,7 +53,7 @@ public:
 //        return current;
 //    }
 
-    void update_height_and_bf_after_rolling(Node<Key, Data>* node) {
+    void update_height_and_bf_after_rolling(Node<Key, Data> *node) {
         node->get_right()->set_Height();
         node->get_right()->set_BF();
         node->get_left()->set_Height();
@@ -62,7 +63,7 @@ public:
     }
 
     // switch nodes
-    void swap_keys_data(Node<Key, Data>* node1, Node<Key, Data>* node2) {
+    void swap_keys_data(Node<Key, Data> *node1, Node<Key, Data> *node2) {
         Key temp_key = node1->get_key();
         std::shared_ptr<Data> temp_data = node1->get_data();
         node1->set_key(node2->get_key());
@@ -71,17 +72,17 @@ public:
         node2->set_data(temp_data);
     }
 
-    void switch_nodes(Node<Key, Data>* node1, Node<Key, Data>* node2) {
+    void switch_nodes(Node<Key, Data> *node1, Node<Key, Data> *node2) {
         swap_keys_data(node1, node2);
     }
 
 
     // find node with key
-    Node<Key,Data>* find_node(const Key& key) {
+    Node<Key, Data> *find_node(const Key &key) {
         return find_node_aux(key, root);
     }
 
-    Node<Key,Data>* find_node_aux(const Key& key, Node<Key,Data>* curr) {
+    Node<Key, Data> *find_node_aux(const Key &key, Node<Key, Data> *curr) {
         if (curr == nullptr) return nullptr;
         if (key == curr->get_key()) return curr;
         if (key < curr->get_key()) return find_node_aux(key, curr->get_left());
@@ -93,11 +94,11 @@ public:
         return numOfNodes;
     }
 
-    Node<Key,Data>* get_maxNode() const {
+    Node<Key, Data> *get_maxNode() const {
         return maxNode;
     }
 
-    void update_maxNode(Node<Key,Data>* curr) {
+    void update_maxNode(Node<Key, Data> *curr) {
         if (curr == nullptr) return;
         maxNode = curr;
         update_maxNode(curr->get_right());
@@ -137,13 +138,13 @@ public:
     }
 
 ///////////////////////////////////////////////
-    void delete_internal(const Node<Key, Data>* node) {
+    void delete_internal(const Node<Key, Data> *node) {
         if (node == nullptr) return;
         node->get_data().delete_internal_trees();
     }
 
     template<class Func>
-    void post_order(Func functionPointer,const Node<Key,Data>* curr) {
+    void post_order(Func functionPointer, const Node<Key, Data> *curr) {
         if (curr == nullptr) return;
         post_order(functionPointer, curr->get_left());
         post_order(functionPointer, curr->get_right());
@@ -321,7 +322,7 @@ public:
         return false;
     }
 
-    bool insert_node(Node<Key, Data>* new_node) {
+    bool insert_node(Node<Key, Data> *new_node) {
         if (node_exists(new_node, root))
             return false;//node already in the tree
         if (numOfNodes == 0) {
@@ -333,8 +334,8 @@ public:
             return true;
         }
         Key k = new_node->get_key();
-        Node<Key, Data>* tmp = root;
-        Node<Key, Data>* last = tmp;
+        Node<Key, Data> *tmp = root;
+        Node<Key, Data> *last = tmp;
         while (tmp != nullptr) {
             last = tmp;
             if (k < tmp->get_key()) {
@@ -356,9 +357,10 @@ public:
 
         return true;
     }
-    void fix_avl_after_deletion(Node<Key, Data>* deletion_node) {
+
+    void fix_avl_after_deletion(Node<Key, Data> *deletion_node) {
         numOfNodes--;
-        Node<Key, Data>* tmp = deletion_node->get_father();
+        Node<Key, Data> *tmp = deletion_node->get_father();
         while (tmp != nullptr) { // go up the tree and fix the BF and height until the root
 
             tmp->set_Height();
@@ -393,7 +395,7 @@ public:
     }
 
     // delete node from the tree
-    void delete_node(Node<Key,Data>* node) {
+    void delete_node(Node<Key, Data> *node) {
         // if the node has no children (leaf)
         if (node->get_Height() == 0) { // leaf
             if (node->get_father() == nullptr) { // single node in the tree
@@ -415,8 +417,8 @@ public:
         // if the node has only one child
         if (node->get_left() == nullptr && node->get_right() != nullptr ||
             node->get_left() != nullptr && node->get_right() == nullptr) {
-            Node<Key,Data>* child = (node->get_left() == nullptr) ? node->get_right()
-                                                                                   : node->get_left();
+            Node<Key, Data> *child = (node->get_left() == nullptr) ? node->get_right()
+                                                                   : node->get_left();
             if (node->get_father() == nullptr) { // node is the root
                 root = child;
                 child->set_father(nullptr);
@@ -435,7 +437,7 @@ public:
             return;
         } else {
             // if the node has two children
-            Node<Key,Data>* successor = node->get_right();
+            Node<Key, Data> *successor = node->get_right();
             while (successor->get_left() != nullptr) { // find the successor
                 successor = successor->get_left();
             }
@@ -444,6 +446,109 @@ public:
             // it got the data of the desired node to be deleted
             return;
         }
+    }
+
+    // the following functions are for merging trees
+
+    // this is not final we still need to change
+
+    // ***************  merge two trees  ****************
+
+    // store the inorder of a tree in an array
+
+    void storeInorderNodes(Node<Key, Data> *node, Node<Key, Data> *inorderNodes[], int *index_ptr) {
+        if (node == nullptr)
+            return;
+
+        // Recur on the left child
+        storeInorderNodes(node->get_left(), inorderNodes, index_ptr);
+
+        // Store the node in the inorderNodes array
+        inorderNodes[*index_ptr] = node;
+        (*index_ptr)++; // Increase index for the next entry
+
+        // Recur on the right child
+        storeInorderNodes(node->get_right(), inorderNodes, index_ptr);
+    }
+
+
+    Node<Key, Data>* sortedArrayToTree(Node<Key, Data>* arr[], int start, int end, Node<Key, Data>* parent) {
+        /* Base Case */
+        if (start > end)
+            return nullptr;
+
+        /* Get the middle element and make it root */
+        int mid = (start + end) / 2;
+        Node<Key, Data>* newRoot = arr[mid];
+        newRoot->set_father(parent); // Set the parent pointer
+
+        /* Recursively construct the left subtree and make it the left child of root */
+        newRoot->set_left(sortedArrayToTree(arr, start, mid - 1, newRoot));
+
+        /* Recursively construct the right subtree and make it the right child of root */
+        newRoot->set_right(sortedArrayToTree(arr, mid + 1, end, newRoot));
+
+        return newRoot;
+    }
+
+
+
+    static Node<Key, Data> **mergeArrays(Node<Key, Data> *arr1[], Node<Key, Data> *arr2[], int m, int n) {
+        Node<Key, Data> **mergedArr = new Node<Key, Data> *[m + n];
+        int i = 0, j = 0, k = 0;
+
+        while (i < m && j < n) {
+            if (arr1[i]->get_key() < arr2[j]->get_key()) {
+                mergedArr[k] = arr1[i];
+                i++;
+            } else {
+                mergedArr[k] = arr2[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i < m) {
+            mergedArr[k] = arr1[i];
+            i++;
+            k++;
+        }
+
+        while (j < n) {
+            mergedArr[k] = arr2[j];
+            j++;
+            k++;
+        }
+
+        return mergedArr;
+    }
+
+
+//    Node<Key, Data> mergeTrees(Node<Key, Data>* root1, Node<Key, Data>* root2, int n, int m)
+//    {
+//        // Store inorder traversal of first tree in an array arr1[]
+//        int *arr1 = new int[m];
+//        int i = 0;
+//        storeInorder(root1, arr1, &i);
+//
+//        // Store inorder traversal of second tree in another array arr2[]
+//        int *arr2 = new int[n];
+//        int j = 0;
+//        storeInorder(root2, arr2, &j);
+//
+//        // Merge the two sorted array into one
+//        int *mergedArr = merge(arr1, arr2, m, n);
+//
+//        // Construct a tree from the merged array and return root of the tree
+//        return sortedArrayToTree(mergedArr, 0, m + n - 1);
+//    }
+
+    void set_root(Node<Key, Data> *new_root) {
+        root = new_root;
+    }
+
+    void set_number_ofnodes(int new_size) {
+        numOfNodes = new_size;
     }
 };
 

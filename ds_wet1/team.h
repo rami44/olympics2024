@@ -10,6 +10,7 @@
 #include "country.h"
 #include "contestant.h"
 #include "binary_tree.h"
+#include "strengthObject.h"
 
 class Team {
 
@@ -24,9 +25,9 @@ private:
     BinaryTree<int, Contestant> second_third_id;
     BinaryTree<int, Contestant> third_third_id;
 
-    BinaryTree<int, int> first_third_strength;
-    BinaryTree<int, int> second_third_strength;
-    BinaryTree<int, int> third_third_strength;
+    BinaryTree<Strength_Obj, int> first_third_strength;
+    BinaryTree<Strength_Obj, int> second_third_strength;
+    BinaryTree<Strength_Obj, int> third_third_strength;
 
 public:
 
@@ -42,15 +43,18 @@ public:
     };
 
     void move_node(BinaryTree<int, Contestant> &sourceTree_id, BinaryTree<int, Contestant> &destTree_id,
-                         BinaryTree<int, int> &sourceTree_strength, BinaryTree<int, int> &desTree_strength,
+                         BinaryTree<Strength_Obj, int> &sourceTree_strength, BinaryTree<Strength_Obj, int> &desTree_strength,
                          Node<int, Contestant> *moving_node);
 
     // remove contestant
     void remove_contestant(int contestantId);
 
-    void update_strength(int old_strength, int new_strength, BinaryTree<int, int> &tree);
+    void update_strength(Strength_Obj& old_strength, Strength_Obj& new_strength, BinaryTree<Strength_Obj, int> &tree);
 
     // GETTERS AND SETTERS
+
+    // set num contestants
+    void setNumContestants(int num_contestants);
 
     // get tree id1
 
@@ -64,19 +68,17 @@ public:
 
     BinaryTree<int, Contestant> *get_tree_id3();
 
-
     // get team_country
 
-    BinaryTree<int, int> *get_tree_strength1();
+    BinaryTree<Strength_Obj, int> *get_tree_strength1();
 
     // get tree strength2
 
-    BinaryTree<int, int> *get_tree_strength2();
+    BinaryTree<Strength_Obj, int> *get_tree_strength2();
 
     // get tree strength3
 
-    BinaryTree<int, int> *get_tree_strength3();
-
+    BinaryTree<Strength_Obj, int> *get_tree_strength3();
 
     Node<int,Country>* get_country();
 
@@ -97,6 +99,17 @@ public:
 
     //rearrange contesant trees after removing contestant
     void re_arrange_trees();
+
+    void update_contestant_strength_in_team(Node<int, Team>* teamNode, int contestantId,
+                                                  Strength_Obj& oldStrength, Strength_Obj& newStrength);
+
+
+    Node<int, Contestant>** sort_id_trees_to_array() ;
+    Node<Strength_Obj, int>** sort_strength_trees_to_array() ;
+
+
+
 };
+
 
 #endif //TEAM_H

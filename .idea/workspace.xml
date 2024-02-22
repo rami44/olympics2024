@@ -20,11 +20,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="remove_contestant">
+    <list default="true" id="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" name="Changes" comment="Olympicsa1.cpp">
+      <change afterPath="$PROJECT_DIR$/ds_wet1/strengthObject.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/Olympicsa1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/Olympicsa1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/contestant.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/contestant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/olympicsTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/olympicsTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/team.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/team.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.h" afterDir="false" />
     </list>
     <list id="170e34ab-11e5-4c42-bf99-98d9f71f0617" name="Changes by amir" comment="Changes by amir">
+      <change afterPath="$PROJECT_DIR$/ds_wet1/strengthObject.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/Node.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/Olympicsa1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/Olympicsa1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/binary_tree.h" afterDir="false" />
@@ -33,6 +41,7 @@
       <change beforePath="$PROJECT_DIR$/ds_wet1/country.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/country.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/country.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/country.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ds_wet1/team.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ds_wet1/team.h" beforeDir="false" afterPath="$PROJECT_DIR$/ds_wet1/team.h" afterDir="false" />
     </list>
     <list id="04c5a4d8-390a-4b3c-9e26-ae92df076799" name="Changes by Rami" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +50,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
@@ -70,13 +80,125 @@
     </option>
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/ds_wet1/contestant.h">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="14" end1="15" start2="15" end2="22" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="17" end1="18" start2="24" end2="26" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="25" end1="25" start2="33" end2="35" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="27" end1="28" start2="37" end2="37" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="35" end1="37" start2="44" end2="59" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/ds_wet1/team.cpp">
       <ranges>
-        <range start1="87" end1="88" start2="87" end2="88" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="96" end1="97" start2="96" end2="97" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="105" end1="106" start2="105" end2="106" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
-        <range start1="154" end1="154" start2="154" end2="155" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
-        <range start1="332" end1="332" start2="333" end2="334" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="2" end1="2" start2="2" end2="3" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="20" end1="23" start2="21" end2="21" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="24" end1="27" start2="22" end2="25" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="64" end1="65" start2="62" end2="64" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="66" end1="68" start2="65" end2="67" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="69" end1="71" start2="68" end2="68" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="72" end1="80" start2="69" end2="73" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="87" end1="88" start2="80" end2="81" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="96" end1="97" start2="89" end2="90" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="105" end1="106" start2="98" end2="99" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="132" end1="133" start2="125" end2="126" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="138" end1="139" start2="131" end2="132" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="144" end1="145" start2="137" end2="138" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="154" end1="154" start2="147" end2="148" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="175" end1="175" start2="169" end2="174" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="178" end1="180" start2="177" end2="179" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="183" end1="184" start2="182" end2="186" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="185" end1="188" start2="187" end2="188" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="189" end1="203" start2="189" end2="192" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="316" end1="317" start2="305" end2="305" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="319" end1="320" start2="307" end2="308" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="321" end1="322" start2="309" end2="310" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="323" end1="324" start2="311" end2="312" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="332" end1="342" start2="320" end2="323" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="343" end1="343" start2="324" end2="419" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ds_wet1/team.h">
+      <ranges>
+        <range start1="12" end1="12" start2="12" end2="13" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="26" end1="29" start2="27" end2="30" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="44" end1="45" start2="45" end2="46" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="50" end1="51" start2="51" end2="52" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="53" end1="53" start2="54" end2="57" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="65" end1="66" start2="69" end2="69" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="69" end1="70" start2="72" end2="73" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="73" end1="74" start2="76" end2="77" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="77" end1="79" start2="80" end2="81" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="95" end1="96" start2="97" end2="98" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="99" end1="99" start2="101" end2="111" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="100" end1="100" start2="112" end2="113" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ds_wet1/binary_tree.h">
+      <ranges>
+        <range start1="11" end1="12" start2="11" end2="12" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="13" end1="15" start2="13" end2="15" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="18" end1="19" start2="18" end2="19" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="29" end1="30" start2="29" end2="30" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="32" end1="32" start2="32" end2="36" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="34" end1="35" start2="38" end2="39" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="38" end1="39" start2="42" end2="44" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="54" end1="55" start2="59" end2="60" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="64" end1="65" start2="69" end2="70" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="73" end1="74" start2="78" end2="79" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="79" end1="80" start2="84" end2="85" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="83" end1="84" start2="88" end2="89" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="95" end1="96" start2="100" end2="101" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="98" end1="98" start2="103" end2="107" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="99" end1="100" start2="108" end2="109" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="105" end1="105" start2="114" end2="120" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="107" end1="109" start2="122" end2="124" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="122" end1="123" start2="137" end2="138" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="131" end1="132" start2="146" end2="147" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="139" end1="140" start2="154" end2="155" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="145" end1="146" start2="160" end2="161" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="154" end1="158" start2="169" end2="173" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="189" end1="192" start2="204" end2="207" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="214" end1="218" start2="229" end2="233" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="247" end1="250" start2="262" end2="265" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="272" end1="273" start2="287" end2="288" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="291" end1="293" start2="306" end2="308" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="300" end1="301" start2="315" end2="316" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="302" end1="303" start2="317" end2="318" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="313" end1="314" start2="328" end2="329" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="315" end1="317" start2="330" end2="332" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="323" end1="324" start2="338" end2="339" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="332" end1="332" start2="347" end2="348" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="335" end1="337" start2="351" end2="353" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="354" end1="354" start2="370" end2="371" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="358" end1="359" start2="375" end2="377" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="360" end1="361" start2="378" end2="379" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="372" end1="374" start2="390" end2="392" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="388" end1="389" start2="406" end2="407" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="395" end1="396" start2="413" end2="414" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="417" end1="419" start2="435" end2="437" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="437" end1="438" start2="455" end2="456" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="447" end1="447" start2="465" end2="568" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/ds_wet1/Olympicsa1.cpp">
+      <ranges>
+        <range start1="14" end1="16" start2="14" end2="15" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="19" end1="19" start2="18" end2="20" changelist="eebdbe4b-3048-4add-8dbf-35e3c73f89d1" />
+        <range start1="21" end1="31" start2="22" end2="472" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="32" end1="37" start2="473" end2="485" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="38" end1="39" start2="486" end2="489" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="40" end1="47" start2="490" end2="517" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="48" end1="49" start2="518" end2="522" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="50" end1="51" start2="523" end2="524" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="52" end1="53" start2="525" end2="527" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="54" end1="55" start2="528" end2="530" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="56" end1="57" start2="531" end2="531" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="58" end1="59" start2="532" end2="533" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="60" end1="61" start2="534" end2="539" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="62" end1="66" start2="540" end2="561" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
+        <range start1="67" end1="68" start2="562" end2="563" changelist="170e34ab-11e5-4c42-bf99-98d9f71f0617" />
       </ranges>
     </file>
   </component>
@@ -121,6 +243,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.binary_tree.h">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -154,7 +281,7 @@
       <workItem from="1708003154746" duration="15770000" />
       <workItem from="1708067401400" duration="32386000" />
       <workItem from="1708151732526" duration="18042000" />
-      <workItem from="1708287564042" duration="16429000" />
+      <workItem from="1708287564042" duration="71962000" />
     </task>
     <task id="LOCAL-00001" summary="test for us">
       <created>1707498791279</created>
@@ -233,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708379248107</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Olympicsa1.cpp">
+      <created>1708440573921</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708440573921</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +393,8 @@
     <MESSAGE value="Changes by amir" />
     <MESSAGE value="added alll olympics classes and finished add_contestant_to_tree" />
     <MESSAGE value="remove_contestant" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove_contestant" />
+    <MESSAGE value="Olympicsa1.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Olympicsa1.cpp" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
