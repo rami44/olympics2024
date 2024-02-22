@@ -17,6 +17,8 @@
 
 #include "wet1util.h"
 #include "Olympicsa1.h"
+#include "team.h"
+#include "strengthObject.h"
 
 
 class Olympics {

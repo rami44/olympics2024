@@ -15,4 +15,5 @@ add_executable(
         contestant.cpp
         team.cpp
         country.cpp
+        strengthObject.cpp
     )

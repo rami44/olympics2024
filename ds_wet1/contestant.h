@@ -6,6 +6,7 @@
 #include "wet1util.h"
 #include "country.h"
 #include "Node.h"
+#include "strengthObject.h"
 
 class Contestant {
 private:
@@ -24,8 +25,9 @@ public:
 
     int& get_strength();
 
-    void set_strength(int new_strength);
+    Strength_Obj& get_strength_object();
 
+    void set_strength(int new_strength);
 
     int& get_num_of_teams();
     void set_num_of_teams();
